@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ekhteear
+namespace Ekhteear.UI
 {
-    public partial class Form1 : Form
+    public partial class UsersForm : Form
     {
-        public Form1()
+        public UsersForm()
         {
             InitializeComponent();
+        }
+
+        private void UsersForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

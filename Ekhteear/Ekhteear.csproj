@@ -32,8 +32,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,16 +54,139 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AddAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddAgentForm.Designer.cs">
+      <DependentUpon>AddAgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AgentForm.Designer.cs">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreditorForm.Designer.cs">
+      <DependentUpon>CreditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerAddForm.Designer.cs">
+      <DependentUpon>CustomerAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerUpdateForm.Designer.cs">
+      <DependentUpon>CustomerUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DebtorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DebtorForm.Designer.cs">
+      <DependentUpon>DebtorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ExtraCostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExtraCostForm.Designer.cs">
+      <DependentUpon>ExtraCostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventoryAddForm.Designer.cs">
+      <DependentUpon>InventoryAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventoryViewForm.Designer.cs">
+      <DependentUpon>InventoryViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductsAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductsAddForm.Designer.cs">
+      <DependentUpon>ProductsAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductUpdateForm.Designer.cs">
+      <DependentUpon>ProductUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReturnGoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReturnGoodsForm.Designer.cs">
+      <DependentUpon>ReturnGoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreForm.Designer.cs">
+      <DependentUpon>StoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpdateAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateAgentForm.Designer.cs">
+      <DependentUpon>UpdateAgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +195,71 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AddAgentForm.resx">
+      <DependentUpon>AddAgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AgentForm.resx">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreditorForm.resx">
+      <DependentUpon>CreditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerAddForm.resx">
+      <DependentUpon>CustomerAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerUpdateForm.resx">
+      <DependentUpon>CustomerUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DebtorForm.resx">
+      <DependentUpon>DebtorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExtraCostForm.resx">
+      <DependentUpon>ExtraCostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventoryAddForm.resx">
+      <DependentUpon>InventoryAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventoryViewForm.resx">
+      <DependentUpon>InventoryViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductsAddForm.resx">
+      <DependentUpon>ProductsAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductUpdateForm.resx">
+      <DependentUpon>ProductUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReturnGoodsForm.resx">
+      <DependentUpon>ReturnGoodsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreForm.resx">
+      <DependentUpon>StoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateAgentForm.resx">
+      <DependentUpon>UpdateAgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UsersForm.resx">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +272,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Gateway\Gateway.csproj">
+      <Project>{fe61c6f5-14cf-4401-a712-9e53e0ff50d8}</Project>
+      <Name>Gateway</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Manager\Manager.csproj">
+      <Project>{1e26a54b-3c9f-48db-b65e-4ba66ef0ca52}</Project>
+      <Name>Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{74245eb9-723a-4c37-ae4c-31df686bbe22}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\1600.png" />
+    <Content Include="Resources\2000px-Maya_4.svg.png" />
+    <Content Include="Resources\addinventory.png" />
+    <Content Include="Resources\arrow_drop_down_grey_192x192.png" />
+    <Content Include="Resources\calculator.png" />
+    <Content Include="Resources\creditor amount.png" />
+    <Content Include="Resources\cross black.png" />
+    <Content Include="Resources\Due amount.png" />
+    <Content Include="Resources\edit new.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\expense today.png" />
+    <Content Include="Resources\imageedit_14_3723483420.png" />
+    <Content Include="Resources\imageedit_17_8377076685.png" />
+    <Content Include="Resources\imageedit_17_83770766851.png" />
+    <Content Include="Resources\imageedit_18_2169781688.png" />
+    <Content Include="Resources\imageedit_18_8223416410.png" />
+    <Content Include="Resources\imageedit_1_2754870824.png" />
+    <Content Include="Resources\imageedit_1_7939263489.png" />
+    <Content Include="Resources\imageedit_23_5115141760.png" />
+    <Content Include="Resources\imageedit_3_2033360082.png" />
+    <Content Include="Resources\imageedit_5_7285109277.png" />
+    <Content Include="Resources\imageedit_7_5361398056.png" />
+    <Content Include="Resources\imageedit_9_3731402199.png" />
+    <Content Include="Resources\imageedit_9_7780965827.png" />
+    <Content Include="Resources\income today.png" />
+    <Content Include="Resources\makefg.png" />
+    <Content Include="Resources\maximize.png" />
+    <Content Include="Resources\minimize 2.png" />
+    <Content Include="Resources\minimize black.png" />
+    <Content Include="Resources\minimize.png" />
+    <Content Include="Resources\new_members.PNG" />
+    <Content Include="Resources\password.png" />
+    <Content Include="Resources\print.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\refresh1.png" />
+    <Content Include="Resources\refund.png" />
+    <Content Include="Resources\retailbill.png" />
+    <Content Include="Resources\sales.PNG" />
+    <Content Include="Resources\total expense.png" />
+    <Content Include="Resources\total income.png" />
+    <Content Include="Resources\user zone.png" />
+    <Content Include="Resources\user zone1.png" />
+    <Content Include="Resources\user.png" />
+    <Content Include="Resources\view-01-512.png" />
+    <Content Include="Resources\view.png" />
+    <Content Include="Resources\view2.png" />
+    <Content Include="Resources\white-settings-256.png" />
+    <Content Include="Resources\wholesale2.png" />
+    <Content Include="Resources\window.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
